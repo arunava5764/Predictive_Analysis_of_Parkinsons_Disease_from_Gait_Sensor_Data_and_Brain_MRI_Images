@@ -1,0 +1,2 @@
+# Predictive_Analysis_of_Parkinsons_Disease_from_Gait_Sensor_Data_and_Brain_MRI_Images
+Multi-modality brings out an opportunity to combine two different sources of data of completely different modality. This experiment has achieved better accuracy on both Gait and PPMI data using multi-modal features that eventually classify Parkinson’s disease more accurately compared to single modality features.
