@@ -1,8 +1,7 @@
 <div align="center">
 <!-- <h1>Predictive_Analysis_of_Parkinsons_Disease_from_Gait_Sensor_Data_and_Brain_MRI_Images: Predictive Analysis of Parkinsons Disease from Gait Sensor Data and Brain MRI Images</h1> -->
-<h2>Efficient Multi-order Gated Aggregation Network</h2>
-[Arunava Chaudhuri], [Deepti R. Bathula](https://www.iitrpr.ac.in/deepti-r-bathula)<sup>\,</sup>
-
+<h2>Predictive Analysis of Parkinsons Disease from Gait Sensor Data and Brain MRI Images</h2>
+[Arunava Chaudhuri](https://github.com/arunava5764)<sup>\*,1,2</sup>, [Deepti R. Bathula](https://www.iitrpr.ac.in/deepti-r-bathula)<sup>\*,1</sup>
 <sup>1</sup>[Indian Institute of Technology, Ropar](https://www.iitrpr.ac.in/)
 </div>
 
