@@ -1,10 +1,9 @@
 <div align="center">
 <!-- <h1>Predictive_Analysis_of_Parkinsons_Disease_from_Gait_Sensor_Data_and_Brain_MRI_Images: Predictive Analysis of Parkinsons Disease from Gait Sensor Data and Brain MRI Images</h1> -->
-<h2><a href="https://arxiv.org/abs/2211.03295">Efficient Multi-order Gated Aggregation Network</a></h2>
 
-[Arunava Chaudhuri](https://lupin1998.github.io/)<sup>\*,1,2</sup>, [Zedong Wang](https://zedongwang.netlify.app/)<sup>\*,1</sup>, [Zicheng Liu](https://pone7.github.io/)<sup>1,2</sup>, [Chen Tan](https://chengtan9907.github.io/)<sup>1,2</sup>, [Haitao Lin](https://bird-tao.github.io/)<sup>1,2</sup>, [Di Wu](https://scholar.google.com/citations?user=egz8bGQAAAAJ&hl=zh-CN)<sup>1,2</sup>, [Zhiyuan Chen](https://zyc.ai/)<sup>1</sup>, [Jiangbin Zheng](https://scholar.google.com/citations?user=egz8bGQAAAAJ&hl=zh-CN)<sup>1,2</sup>, [Stan Z. Li](https://scholar.google.com/citations?user=Y-nyLGIAAAAJ&hl=zh-CN)<sup>†,1</sup>
+[Arunava Chaudhuri](https://lupin1998.github.io/)<sup>\*,1,2</sup>, [Zedong Wang](https://zedongwang.netlify.app/)<sup>\*,1</sup>
 
-<sup>1</sup>[Westlake University](https://westlake.edu.cn/), <sup>2</sup>[Zhejiang University](https://www.zju.edu.cn/english/)
+<sup>1</sup>[Indian Institute of Technology, Ropar](https://www.iitrpr.ac.in/)
 </div>
 
 <p align="center">
