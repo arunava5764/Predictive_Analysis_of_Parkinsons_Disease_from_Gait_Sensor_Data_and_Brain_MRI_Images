@@ -8,7 +8,7 @@
 </div>
 
 <p align="center">
-<img src="Diagrams/siamese.PNG" width=100% height=100% 
+<img src="Diagrams/siamese.PNG" width=100% height=80% 
 class="center">
 </p>
 
@@ -17,7 +17,10 @@ This experiment is an extension to the experiment on achieving higher accuracy a
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#catalog">Catalog</a></li>
+    <li><a href="#File-Descriptions">File Description</a></li>
+    <li><a href="#Datasets">Datasets</a></li>
+    <li><a href="#Traning-and-Validation">Traning and Validation</a></li>
+    <li><a href="#Test-Flow">Test Flow</a></li>
     <li><a href="#Comparison-Between-Multi-Modality-and-Baseline-Single-Modality">Comparison Between Multi-Modality and Baseline Single Modality</a></li>
     <li><a href="#Comaprison-With-Previous-PPMI-Experiment">Comaprison With Previous PPMI Experiment</a></li>
     <li><a href="#Comaprison-With-Previous-Gait-Experiment">Comaprison With Previous Gait Experimen</a></li>
@@ -25,6 +28,46 @@ This experiment is an extension to the experiment on achieving higher accuracy a
   </ol>
 </details>
 
+
+## File Description
+
+The content of each folder of this repository is described as follows.
+- [x] **Baseline_Model_Code** This folder contains code files for creating baseline Gait model and PPMI model.
+- [x] **Baseline_Model_Data** 
+    - [x] **Preprossed_Gait_Data** This folder contains data files for baseline Gait model where the data has been proprocessed using statistical methods and devided based on class and each class file is denoted as `Gait_HC.csv` and `Gait_PD.csv` data fils.
+    - [x] **Preprocessed_PPMI_Data** This folder contains data files for baseline PPMI model where the data has been collected based on some criteria and devided based on class and each class file is denoted as `PPMI_HC.csv` and `PPMI_PD.csv` data fils.
+- [x] **Diagrams** This folder contains all the diagrams whihch depict the process of each techniques we have implemented in this experiment and the same have used in report. 
+- [x] **Model** This folder contains model architecture metadata for baseline Gait model, PPMI model and Siamese Multi Model. 
+- [x] **Siamese_Model_Code** This folder contains code files for testing Gait data individually using Siamese Multi Model architecture : `Siamese_Network_Gait_Test` and for testing PPMI data individually using Siamese Multi Model architecture : `Siamese_Network_PPMI_Test`.
+
+## Datasets
+
+we have chosen two datasets to work with. 
+- One of them is the Gait dataset from the [Physionet database](https://physionet.org/content/gaitpdb/1.0.0/). It includes measurement of gait analysis data of 93 individuals with PD with a mean age of 66.3 years of which 63% are male patients, along with 73 healthy control individuals with a mean age of 66.3 years of which 55% are male patients.
+The database contains the records of force applied to the ground vertically by subjects as they walked in a normal fashion with their usual speed for almost 2 minutes on plain ground. Under the foot of each leg, there are eight sensors to calculate strength as a function of time. The outcome of each of these sixteen sensors has been stored at a 100 Hz sample rate.
+- The other dataset is clinical and images brain image data from the [PPMI database](https://www.ppmi-info.org/). From the 1141 participants whose data is stored in the PPMI repository, 666 participants which are 58.4% of total participants, have undergone several clinical and diagnostic assessments for detecting Parkinson's disease are added to this database. Now from the 666 participants whose data was added to the study, 189 participants which are 28.4% are detected with PD, whereas 62 subjects which are 9.3% of the total participants shows scans without evidence of dopaminergic deficits, and the rest of the 415 participants that is 62.3% are healthy participants. The rate of exclusion of each individual does not vary notably between each class of data
+
+
+## Training and Vlidation
+
+We have divided this part in several steps for better understanding. At first it starts with converting the Gait sensor data in more precise format to remove complexity while merging with PPMI data.
+- It starts with applying seven important statistical approach on each column of sensor data like Minimum, Maximum, Mean, Median, Standard Deviation, Skewness, and Kurtosis.
+- For each subject the whole time series data boils down to 1 single row with 18x7 = 126 features (each attribute converted to 7 other columns).
+- For PPMI dataset, we have considered 7 visits data along with baseline visit for motor and non-motor symptoms data which gives 1595 number of features.
+
+<p align="center">
+<img src="Diagrams/train_test_ppt.png" width=80% height=100% 
+class="center">
+</p>
+
+## Test Flow
+
+To implement this experiment in a real-world scenario we have collected all those separated Gait and PPMI data from test set without label. Then to check model performance only for Gait data, we have randomly selected 5 positive (PD patients) and 5 negative (HC patients) PPMI data from train set and combine them individually against a single Gait test sample which will generate 10 (Gait + PPMI) samples for each gait test samples. Now those generated data will act as anchor in triplet model along with the positive and negative samples are taken from training set of combined Parkinson’s disease patient data and Healthy Control patient data records respectively. So, there will be 10 triplet model output against 10 set of triplet inputs. Here the model will calculate distance similar to triplet loss model but the only difference is that it will generate output as 1 if distance between anchor and positive is less than distance between anchor and negative and 0 if the opposite case happens. So, these 10-triplet model will generate 10 labels against each model and we have considered majority voting technique to decide the predicted label on that particular Gait test data. We have followed similar technique for testing PPMI test data.
+
+<p align="center">
+<img src="Diagrams/test_ppt.png" width=100% height=100% 
+class="center">
+</p>
 
 ## Comparison Between Multi-Modality and Baseline Single Modality
 
