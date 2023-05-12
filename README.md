@@ -19,6 +19,7 @@ This experiment is an extension to the experiment on achieving higher accuracy a
   <ol>
     <li><a href="#File-Descriptions">File Description</a></li>
     <li><a href="#Datasets">Datasets</a></li>
+    <li><a href="#Steps-to-Replicate-the-Experiment">Steps to Replicate the Experiment</a></li>
     <li><a href="#Traning-and-Validation">Traning and Validation</a></li>
     <li><a href="#Test-Flow">Test Flow</a></li>
     <li><a href="#Comparison-Between-Multi-Modality-and-Baseline-Single-Modality">Comparison Between Multi-Modality and Baseline Single Modality</a></li>
@@ -36,6 +37,7 @@ The content of each folder of this repository is described as follows.
 - [x] **Baseline_Model_Data** 
     - [x] **Preprossed_Gait_Data** This folder contains data files for baseline Gait model where the data has been proprocessed using statistical methods and devided based on class and each class file is denoted as `Gait_HC.csv` and `Gait_PD.csv` data fils.
     - [x] **Preprocessed_PPMI_Data** This folder contains data files for baseline PPMI model where the data has been collected based on some criteria and devided based on class and each class file is denoted as `PPMI_HC.csv` and `PPMI_PD.csv` data fils.
+- [x] **Data_Preprocessing_Code** This folder contains three code files. `Data_Division` code file separates preprocessed data based on class and generates new lass wise datasets. `Gait_Data_Preprocessing` code file takes the original Gait source file and converts it to more readble format to suit our experiment. `PPMI_Data_Preprocessing` code files uses the original PPMI datanase records and preprocessed it by collecting clanical data based on some vistis for a particular patient. 
 - [x] **Diagrams** This folder contains all the diagrams whihch depict the process of each techniques we have implemented in this experiment and the same have used in report. 
 - [x] **Model** This folder contains model architecture metadata for baseline Gait model, PPMI model and Siamese Multi Model. 
 - [x] **Siamese_Model_Code** This folder contains code files for testing Gait data individually using Siamese Multi Model architecture : `Siamese_Network_Gait_Test` and for testing PPMI data individually using Siamese Multi Model architecture : `Siamese_Network_PPMI_Test`.
@@ -47,6 +49,16 @@ we have chosen two datasets to work with.
 The database contains the records of force applied to the ground vertically by subjects as they walked in a normal fashion with their usual speed for almost 2 minutes on plain ground. Under the foot of each leg, there are eight sensors to calculate strength as a function of time. The outcome of each of these sixteen sensors has been stored at a 100 Hz sample rate.
 - The other dataset is clinical and images brain image data from the [PPMI database](https://www.ppmi-info.org/). From the 1141 participants whose data is stored in the PPMI repository, 666 participants which are 58.4% of total participants, have undergone several clinical and diagnostic assessments for detecting Parkinson's disease are added to this database. Now from the 666 participants whose data was added to the study, 189 participants which are 28.4% are detected with PD, whereas 62 subjects which are 9.3% of the total participants shows scans without evidence of dopaminergic deficits, and the rest of the 415 participants that is 62.3% are healthy participants. The rate of exclusion of each individual does not vary notably between each class of data
 
+## Steps to Replicate the Experiment
+
+To replicate this experiment and generate it's results the belowe steps need to followed:
+- Download the Gait and PPMI datasest from the sites mentioned above.
+- Use those data in the `Gait_Data_Preprocessing` and `PPMI_Data_Preprocessing` respectively as mentioned there and run them.
+- The output datasets of those code files will be used in the `Data_Division` code file and it will generate four datasets (two for Gait and two for PPMI).
+- The generated two Gait datasets will be used in the baseline Gait model code and it will generates Gait model architecture.
+- Similary the  generated two PPMI datasets will be used in the baseline PPMI model code and it will give PPMI model architecture.
+- Next those two architecture will be used in `Siamese_Network_PPMI_Test` code file. It will generate Siamese Network model and it will be stored. Same model will be used to test PPMI test data.
+- The saved Siamese Network will be used in `Siamese_Network_Gait_Test` code and it will test Gait test data in similar way.
 
 ## Training and Vlidation
 
@@ -126,5 +138,3 @@ would also like to thank [Mr. Abhishek Singh Sambyal](https://abhisheksambyal.gi
 Engineering Department, IIT Ropar) for his guidance.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
