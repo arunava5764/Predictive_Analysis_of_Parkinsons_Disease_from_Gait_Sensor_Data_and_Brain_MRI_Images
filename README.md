@@ -26,9 +26,6 @@ This experiment is an extension to the experiment on achieving higher accuracy a
 </details>
 
 
-
-## catalog
-
 ## Comparison Between Multi-Modality and Baseline Single Modality
 
 So, if we consider our previous experiment on individual dataset using individual model it is evident that, proposed architecture has able to improve the accuracy along with Cohen Kappa score and ROC AUC value using those multi-modal features. The same scenario is described in the below comparison chart.
@@ -57,7 +54,7 @@ We have compared our model several other previous research works produced using 
 
 From above comparison table for PPMI dataset it is evident that this experiment has successfully crossed all the benchmark accuracy of previous research in recent times. Also in terms of AUC score, Cohen Kappa Score, Sensitivity and specificity this architecture performed better than previous studies.
 
-## Comaprison With Previous Gait Experimen
+## Comaprison With Previous Gait Experiment
 
 While considering Gait dataset, the below table describes little bit different scenario compared to PPMI result. Recent studies have already got an highest accuracy over 99% and our experiment is almost similar to those results. Not only that, sensitivity, specificity and F1 Score, all these evaluation metrics are also near about similar to recent research studies. So we can say that as all the recent research experiment already achieved near to 100% accuracy that is why our framework does not achieved much more than that result. So there is no scope of improvement as of now for Gait Dataset.
 
@@ -75,6 +72,8 @@ While considering Gait dataset, the below table describes little bit different s
 | Liu et al. (2021) [[Link](https://link.springer.com/article/10.1007/s10489-020-02182-5)<sup></sup>] | 99.22 | 98.04 | 100 | 0.99 |
 | Tong et al. (2021) [[Link](https://www.mdpi.com/2076-3417/11/4/1834)<sup></sup>] | 99.23 | NR | NR | NR |
 | Proposed Method | 99.2 | 98.52 | 100 | 0.99 |
+
+
 
 ## Acknowledgement
 
