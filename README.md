@@ -17,10 +17,10 @@ This experiment is an extension to the experiment on achieving higher accuracy a
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#File-Descriptions">File Description</a></li>
+    <li><a href="#File-Description">File Description</a></li>
     <li><a href="#Datasets">Datasets</a></li>
     <li><a href="#Steps-to-Replicate-the-Experiment">Steps to Replicate the Experiment</a></li>
-    <li><a href="#Traning-and-Validation">Traning and Validation</a></li>
+    <li><a href="#Traning-and-Validation">Trainng and Validation</a></li>
     <li><a href="#Test-Flow">Test Flow</a></li>
     <li><a href="#Comparison-Between-Multi-Modality-and-Baseline-Single-Modality">Comparison Between Multi-Modality and Baseline Single Modality</a></li>
     <li><a href="#Comaprison-With-Previous-PPMI-Experiment">Comaprison With Previous PPMI Experiment</a></li>
