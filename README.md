@@ -60,7 +60,7 @@ To replicate this experiment and generate it's results the belowe steps need to 
 - Next those two architecture will be used in `Siamese_Network_PPMI_Test` code file. It will generate Siamese Network model and it will be stored. Same model will be used to test PPMI test data.
 - The saved Siamese Network will be used in `Siamese_Network_Gait_Test` code and it will test Gait test data in similar way.
 
-## Training and Vlidation
+## Training and Validation
 
 We have divided this part in several steps for better understanding. At first it starts with converting the Gait sensor data in more precise format to remove complexity while merging with PPMI data.
 - It starts with applying seven important statistical approach on each column of sensor data like Minimum, Maximum, Mean, Median, Standard Deviation, Skewness, and Kurtosis.
