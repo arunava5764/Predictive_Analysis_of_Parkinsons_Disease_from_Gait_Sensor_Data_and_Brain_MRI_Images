@@ -20,7 +20,7 @@ This experiment is an extension to the experiment on achieving higher accuracy a
     <li><a href="#File-Description">File Description</a></li>
     <li><a href="#Datasets">Datasets</a></li>
     <li><a href="#Steps-to-Replicate-the-Experiment">Steps to Replicate the Experiment</a></li>
-    <li><a href="#Traning-and-Validation">Trainng and Validation</a></li>
+    <li><a href="#Training-and-Validation">Training and Validation</a></li>
     <li><a href="#Test-Flow">Test Flow</a></li>
     <li><a href="#Comparison-Between-Multi-Modality-and-Baseline-Single-Modality">Comparison Between Multi-Modality and Baseline Single Modality</a></li>
     <li><a href="#Comaprison-With-Previous-PPMI-Experiment">Comaprison With Previous PPMI Experiment</a></li>
